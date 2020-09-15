@@ -14,10 +14,12 @@
         .p2{
         	padding-top: 20px;
         	font-size: 25px;
+        	line-height: 1.5;
         }
         .p1{
         	text-align:justify;
         	text-justify:inter-ideograph;
+        	line-height: 1.2;
         }
         a{
         	font-family: Sans-serif;
@@ -37,16 +39,16 @@
 	<table style="width: 600px">
 		<tr>
 			<td>
-				<a href="mailto:daooshee@pku.edu.cn" class="links">Wenjing Wang</a>
+				<a href="https://daooshee.github.io/website/" class="links">Wenjing Wang</a>
 			</td>
 			<td>
-				<a href="mailto:williamyang@pku.edu.cn" class="links">Shuai Yang</a>
+				<a href="https://williamyang1991.github.io" class="links">Shuai Yang</a>
 			</td>
 			<td>
-				<a href="mailto:xujizheng@bytedance.com" class="links">Jizheng Xu</a>
+				<a href="https://ieeexplore.ieee.org/author/37279201100" class="links">Jizheng Xu</a>
 			</td>
 			<td>
-				<a href="mailto:liujiaying@pku.edu.cn" class="links">Jiaying Liu</a>
+				<a href="http://www.icst.pku.edu.cn/struct/people/liujiaying.html" class="links">Jiaying Liu</a>
 			</td>
 		</tr>
 	</table>
@@ -69,58 +71,63 @@
 	<p class='p2'> Abstract </p> 
 	<p class='p1'> In recent years, neural style transfer has attracted more and more attention, especially for image style transfer. However, temporally consistent style transfer for videos is still a challenging problem. Existing methods, either relying on a significant amount of video data with optical flows or using single-frame regularizers, fail to handle strong motions or complex variations, therefore have limited performance on real videos. We first identify the cause of the conflict between style transfer and temporal consistency, and propose to reconcile this contradiction by relaxing the objective function, so as to make the stylization loss term more robust to motions. Through relaxation, style transfer is more robust to inter-frame variation without degrading the subjective effect. Based on relaxation and regularization, we design a zero-shot video style transfer framework. Moreover, for better feature migration, we introduce a new module to dynamically adjust inter-channel distributions. Quantitative and qualitative results demonstrate the superiority of our method over state-of-the-art style transfer methods. </p>
 
-<!-- 	<p class='p2'> Temporal Consistency via Training on Single-Frame </p> 
-
-	<p class='p1'> We mathematically model temporal consistency maintenance as mapping, from which a new regularization is derived. For long-term temporal consistency, we propose a strategy of sharing global features. </p>
-
-	<div align="center">
-		<img src="compound_results.jpg" width=90%> <br>
-	</div>
-	<p class='p1'> Figure 2. Performance of temporal consistency and stylization. Each data point represents an individual experiment. The strength of regularization is represented by different colors. A deeper color indicates a higher temporal loss weight. For the convenience of comparison, we additionally draw some light gray dotted lines. The proposed compound regularization has the best trade-off rates.
-	</p>
-
-
 	<p class='p2'> Consistent Video Style Transfer </p> 
 	<div align="center">
-		<img src="Architecture.jpg" width=100%> <br>
+		<img src="architecture.jpg" width=100%> <br>
 	</div>
-	<p class='p1'> Figure 3. Left: the proposed decorator block for inter-channel feature adjustment. Both target style features and input content features are fed into a shallow sub-network Filter Predictor to predict filters. Residual learning and dimensionality reduction are used to improve the efficiency. Right: The overall architecture of the proposed encoder-decoder style transfer network. </p>
+	<p class='p1'> Figure 1. Left: the proposed decorator block for inter-channel feature adjustment. Both target style features and input content features are fed into a shallow sub-network Filter Predictor to predict filters. Residual learning and dimensionality reduction are used to improve the efficiency. Right: The overall architecture of the proposed encoder-decoder style transfer network. </p>
 
 	<p class='p2'> Resources </p> 
 	<p class='p1'>
-		<ul style="line-height:15px">
- 		　　<li> Paper: <a href="" class="links"> Coming Soon </a> </li>
-		　　<li> Code: <a href="" class="links"> Coming Soon </a> </li>
+		<ul style="line-height:2">
+ 			<li> Paper: <a href="" class="links"> Coming Soon </a> </li>
+			<li> Code: <a href="" class="links"> Github (Coming Soon) </a> </li>
+			<li> Supplementary (PDF+Video): <a href="" class="links">Google Drive (Coming Soon)</a> <a href="" class="links">Baidu Disk (Coming Soon)</a> </li></li>
 		</ul>
-	</p> -->
+	</p>
 
-<!-- 	<p class='p2'> Citation</p>
-	<p> @InProceedings{Compound2020, <br>
-		&nbsp; &nbsp; author = {Wang, Wenjing and Xu, Jizheng and Zhang, Li and Wang, Yue and Liu, Jiaying}, <br>
-		&nbsp; &nbsp; title = {Consistent Video Style Transfer via Compound Regularization}, <br>
-		&nbsp; &nbsp; booktitle = {AAAI Conference on Artificial Intelligence}, <br>
-	   	&nbsp; &nbsp; month = {February}, <br>
+	<p class='p2'> Citation</p>
+	<p> @article{ReReVST2020, <br>
+		&nbsp; &nbsp; author = {Wang, Wenjing and Yang, Shuai and Xu, Jizheng and Liu, Jiaying}, <br>
+		&nbsp; &nbsp; title = {Consistent Video Style Transfer via Relaxation and Regularization}, <br>
+		&nbsp; &nbsp; journal = {{IEEE} Trans. Image Process.}, <br>
 	   	&nbsp; &nbsp; year = {2020} <br>
 	} <br> 
-	</p> -->
+	</p>
 
-<!-- 	<p class='p2'> Selected Results </p> 
+	<p class='p2'> Selected Results </p> 
 	<div align="center">
-		<img src="obj_results.jpg" width="860px">
+		<img src="compare_result.jpg" width="80%">
 	</div>
-	<p class='p1'> Figure 3. Quantitative evaluation of temporal consistency. 
-	For the proposed method, Baseline denotes the proposed image style transfer network, Blind denotes using Blind [1] for post-processing, Lt denotes training with temporal loss, and Global denotes using global feature sharing. Our models yields the lowest temporal loss for all temporal length.</p>
+	<p class='p1'> Figure 2. Quantitative evaluation of temporal consistency. Our model yields the lowest temporal loss for all temporal length.</p>
 
-	<p class='p2'> Video Results</p>
+	<br>
+
 	<div align="center">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/SawtsxZgSss" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<img src="compare_result_video.jpg" width="80%">
 	</div>
+	<p class='p1'> Figure 3. Comparisons on video style transfer. The bottom of each row shows the temporal error heat map. Our method can best balance stylization and maintaining temporal consistency.</p>
 
-	<p class='p2'> Reference</p>
-	<p class='p1'> [1] Lai, W.-S.; Huang, J.-B.; Wang, O.; Shechtman, E.; Yumer, E.; and Yang, M.-H. 2018. Learning blind video temporal consistency. In Proc. European Conf. Computer Vision, 170–185.</p>
- -->
+	<br>
+
+	<div align="center">
+		<img src="compare_result_video2.jpg" width="80%">
+	</div>
+	<p class='p1'> Figure 4. More comparison results on special cases of (a) changing focus, (b) changing illumination, (c) large motion. Compared with Ruder et al. [1], the result of our model fully reflects the content of the input video. Besides, the texture and color of our result are more consistent with the input style image.</p>
+
+	<br>
+
+	<div align="center">
+		<img src="compare_aaai.jpg" width="50%">
+	</div>
+	<p class='p1'> Figure 5. Qualitative comparison against our earlier publication [2]. With the proposed relaxed style loss, the color becomes richer, the details are clearer, and the texture of strokes is closer to the style reference. This demonstrates the effectiveness of our new style loss relaxation scheme.</p>
+
 	<p class='p2'> Related Project</p>
 	<p class='p1'> <a href="https://daooshee.github.io/CompoundVST/"> Consistent Video Style Transfer via Compound Regularization</a> </p>
 
+	<p class='p2'> Reference</p>
+	<p class='p1'> [1] M. Ruder, A. Dosovitskiy, and T. Brox, “Artistic style transfer for videos,” in Proc. German Conference on Pattern Recognition, 2016, pp. 26–36.</p>
+
+	<p class='p1'> [2] W. Wang, J. Xu, L. Zhang, Y. Wang, and J. Liu, “Consistent video style transfer via compound regularization,” in Proc. AAAI Conference on Artificial Intelligence, 2020, pp. 12 233–12 240.</p>
 
 </html>
